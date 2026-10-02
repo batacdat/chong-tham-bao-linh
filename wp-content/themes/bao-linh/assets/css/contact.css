@@ -1,0 +1,929 @@
+/* ========================================================================== 
+   CONTACT PAGE - CHỐNG THẤM BẢO LINH
+   Primary: #f7521c | #3652cb
+   File: assets/css/contact.css
+   ========================================================================== */
+
+.bl-contact-page {
+    --bl-orange: #f7521c;
+    --bl-orange-dark: #d9410f;
+    --bl-orange-soft: #fff3ed;
+    --bl-blue: #3652cb;
+    --bl-blue-dark: #203a9b;
+    --bl-blue-deep: #123b68;
+    --bl-blue-soft: #eef2ff;
+    --bl-text: #334155;
+    --bl-muted: #64748b;
+    --bl-border: #e2e8f0;
+    --bl-bg: #f7f9fc;
+    --bl-white: #ffffff;
+    color: var(--bl-text);
+    background: var(--bl-white);
+}
+
+.bl-contact-page * {
+    box-sizing: border-box;
+}
+
+.bl-contact-page a {
+    text-decoration: none;
+}
+
+.bl-contact-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* ========================================================================== 
+   HERO
+   ========================================================================== */
+
+.bl-contact-hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bl-blue) 0%, var(--bl-blue-dark) 100%);
+    color: var(--bl-white);
+    padding: 78px 0 82px;
+}
+
+.bl-contact-hero::before,
+.bl-contact-hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.bl-contact-hero::before {
+    width: 430px;
+    height: 430px;
+    right: -160px;
+    top: -240px;
+    background: rgba(247, 82, 28, 0.16);
+}
+
+.bl-contact-hero::after {
+    width: 300px;
+    height: 300px;
+    left: -170px;
+    bottom: -210px;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.bl-contact-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bl-contact-eyebrow,
+.bl-contact-section-label,
+.bl-final-cta-label {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.bl-contact-eyebrow {
+    color: #ffd7c9;
+    margin-bottom: 14px;
+}
+
+.bl-contact-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(32px, 4vw, 50px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.bl-contact-hero h1 span {
+    color: #fff;
+}
+
+.bl-contact-hero p {
+    max-width: 730px;
+    margin: 22px auto 0;
+    color: #e8edff;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.bl-contact-hero-actions,
+.bl-final-cta-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.bl-btn {
+    min-height: 48px;
+    padding: 0 24px;
+    border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+}
+
+.bl-btn:hover {
+    transform: translateY(-2px);
+}
+
+.bl-btn-orange {
+    color: #fff;
+    background: var(--bl-orange);
+    box-shadow: 0 8px 20px rgba(247, 82, 28, .22);
+}
+
+.bl-btn-orange:hover {
+    color: #fff;
+    background: var(--bl-orange-dark);
+    box-shadow: 0 10px 24px rgba(247, 82, 28, .3);
+}
+
+.bl-btn-outline {
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.55);
+    background: rgba(255,255,255,.08);
+}
+
+.bl-btn-outline:hover {
+    color: var(--bl-blue-deep);
+    background: #fff;
+}
+
+.bl-btn-white {
+    color: var(--bl-blue);
+    background: #fff;
+}
+
+.bl-btn-white:hover {
+    color: var(--bl-blue);
+    background: #f5f7ff;
+}
+
+.bl-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ========================================================================== 
+   GENERAL SECTIONS
+   ========================================================================== */
+
+.bl-contact-section {
+    padding: 78px 0;
+}
+
+.bl-contact-main-section {
+    background: #fff;
+}
+
+.bl-contact-section-heading {
+    max-width: 760px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.bl-contact-section-heading .bl-contact-section-label,
+.bl-form-heading .bl-contact-section-label,
+.bl-contact-info-panel .bl-contact-section-label,
+.bl-location-card .bl-contact-section-label {
+    color: var(--bl-orange);
+}
+
+.bl-contact-section-heading h2,
+.bl-form-heading h2,
+.bl-contact-info-panel h2 {
+    margin: 8px 0 12px;
+    color: var(--bl-blue-deep);
+    font-size: clamp(27px, 3vw, 38px);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.bl-contact-section-heading p,
+.bl-form-heading p {
+    margin: 0;
+    color: var(--bl-muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ========================================================================== 
+   CONTACT + FORM
+   ========================================================================== */
+
+.bl-contact-main-grid {
+    display: grid;
+    grid-template-columns: minmax(300px, .78fr) minmax(0, 1.22fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.bl-contact-info-panel {
+    position: relative;
+    overflow: hidden;
+    padding: 36px 32px;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #f4f6ff 0%, #eef2ff 100%);
+    border: 1px solid #dfe5fb;
+}
+
+.bl-contact-info-panel::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -120px;
+    bottom: -130px;
+    border-radius: 50%;
+    background: rgba(247,82,28,.08);
+}
+
+.bl-contact-info-panel h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.bl-contact-info-panel h2 span {
+    color: var(--bl-blue);
+}
+
+.bl-contact-info-intro {
+    position: relative;
+    z-index: 1;
+    max-width: 430px;
+    margin: 0 0 25px;
+    color: var(--bl-muted);
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.bl-contact-info-list {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 12px;
+}
+
+.bl-contact-info-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px;
+    border-radius: 11px;
+    background: rgba(255,255,255,.86);
+    border: 1px solid rgba(219,226,244,.95);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.bl-contact-info-card:hover {
+    transform: translateX(4px);
+    border-color: rgba(54,82,203,.35);
+    box-shadow: 0 8px 22px rgba(54,82,203,.09);
+}
+
+.bl-contact-info-icon {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.bl-contact-info-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.bl-icon-orange {
+    color: var(--bl-orange);
+}
+
+.bl-icon-blue {
+    color: var(--bl-blue);
+}
+
+.bl-contact-info-card strong,
+.bl-contact-info-card small {
+    display: block;
+}
+
+.bl-contact-info-card strong {
+    margin-bottom: 4px;
+    color: var(--bl-blue-deep);
+    font-size: 13px;
+}
+
+.bl-contact-info-card small {
+    color: var(--bl-muted);
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.bl-contact-quick-box {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px dashed #cbd5e1;
+}
+
+.bl-contact-quick-dot {
+    flex: 0 0 9px;
+    width: 9px;
+    height: 9px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 5px rgba(34,197,94,.12);
+}
+
+.bl-contact-quick-box strong {
+    color: var(--bl-blue-deep);
+    font-size: 13px;
+}
+
+.bl-contact-quick-box p {
+    margin: 3px 0 0;
+    color: var(--bl-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.bl-contact-form-card {
+    padding: 36px;
+    border-radius: 16px;
+    border: 1px solid var(--bl-border);
+    background: #fff;
+    box-shadow: 0 16px 45px rgba(15,23,42,.07);
+}
+
+.bl-form-heading {
+    margin-bottom: 24px;
+}
+
+.bl-form-heading h2 {
+    font-size: 28px;
+    margin-top: 7px;
+}
+
+.bl-form-heading p {
+    font-size: 13.5px;
+}
+
+.bl-contact-form {
+    display: grid;
+    gap: 17px;
+}
+
+.bl-form-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.bl-form-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: #1e293b;
+    font-size: 12.5px;
+    font-weight: 700;
+}
+
+.bl-form-field label span {
+    color: var(--bl-orange);
+}
+
+.bl-form-field label small {
+    color: var(--bl-muted);
+    font-weight: 500;
+}
+
+.bl-form-field input[type="text"],
+.bl-form-field input[type="tel"],
+.bl-form-field select,
+.bl-form-field textarea {
+    width: 100%;
+    border: 1px solid #d8e0eb;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #1e293b;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.bl-form-field input[type="text"],
+.bl-form-field input[type="tel"],
+.bl-form-field select {
+    height: 48px;
+    padding: 0 14px;
+}
+
+.bl-form-field textarea {
+    min-height: 125px;
+    resize: vertical;
+    padding: 13px 14px;
+    line-height: 1.55;
+}
+
+.bl-form-field input::placeholder,
+.bl-form-field textarea::placeholder {
+    color: #94a3b8;
+}
+
+.bl-form-field input:focus,
+.bl-form-field select:focus,
+.bl-form-field textarea:focus {
+    border-color: var(--bl-blue);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(54,82,203,.1);
+}
+
+.bl-upload-box {
+    min-height: 76px;
+    display: flex !important;
+    align-items: center;
+    gap: 13px;
+    margin: 0 !important;
+    padding: 13px 15px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 9px;
+    background: #f8fafc;
+    cursor: pointer;
+    transition: border-color .2s ease, background .2s ease;
+}
+
+.bl-upload-box:hover {
+    border-color: var(--bl-orange);
+    background: var(--bl-orange-soft);
+}
+
+.bl-upload-box input[type="file"] {
+    display: none;
+}
+
+.bl-upload-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--bl-orange);
+    border: 1px solid #ffdbc9;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.bl-upload-box strong,
+.bl-upload-box small {
+    display: block;
+}
+
+.bl-upload-box strong {
+    color: var(--bl-blue-deep);
+    font-size: 13px;
+}
+
+.bl-upload-box small {
+    margin-top: 3px;
+    color: var(--bl-muted);
+    font-size: 11.5px;
+    font-weight: 500;
+}
+
+.bl-file-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 7px;
+}
+
+.bl-file-list span {
+    padding: 4px 8px;
+    border-radius: 5px;
+    background: var(--bl-blue-soft);
+    color: var(--bl-blue);
+    font-size: 10.5px;
+}
+
+.bl-submit-btn {
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--bl-orange);
+    color: #fff;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(247,82,28,.18);
+    transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.bl-submit-btn:hover {
+    background: var(--bl-orange-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 11px 25px rgba(247,82,28,.25);
+}
+
+.bl-submit-arrow {
+    font-size: 19px;
+    line-height: 1;
+}
+
+.bl-form-note {
+    margin: -5px 0 0;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* ========================================================================== 
+   BENEFITS
+   ========================================================================== */
+
+.bl-contact-benefits-section {
+    background: var(--bl-bg);
+    border-top: 1px solid #eef2f7;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.bl-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+}
+
+.bl-benefit-card {
+    position: relative;
+    overflow: hidden;
+    padding: 26px 22px;
+    border-radius: 13px;
+    border: 1px solid var(--bl-border);
+    background: #fff;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.bl-benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: #cfd7f7;
+    box-shadow: 0 12px 30px rgba(54,82,203,.1);
+}
+
+.bl-benefit-number {
+    position: absolute;
+    top: 13px;
+    right: 17px;
+    color: #e8ecff;
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.bl-benefit-icon {
+    position: relative;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 17px;
+    border-radius: 12px;
+    background: var(--bl-orange-soft);
+    font-size: 21px;
+}
+
+.bl-benefit-card:nth-child(even) .bl-benefit-icon {
+    background: var(--bl-blue-soft);
+}
+
+.bl-benefit-card h3 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 8px;
+    color: var(--bl-blue-deep);
+    font-size: 15px;
+}
+
+.bl-benefit-card p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: var(--bl-muted);
+    font-size: 12.5px;
+    line-height: 1.6;
+}
+
+/* ========================================================================== 
+   LOCATION
+   ========================================================================== */
+
+.bl-contact-location-section {
+    background: #fff;
+}
+
+.bl-location-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, .65fr);
+    gap: 22px;
+}
+
+.bl-map-card {
+    min-height: 430px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid var(--bl-border);
+    box-shadow: 0 10px 28px rgba(15,23,42,.06);
+}
+
+.bl-map-card iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    border: 0;
+}
+
+.bl-location-card {
+    padding: 31px;
+    border-radius: 15px;
+    border: 1px solid var(--bl-border);
+    background: var(--bl-bg);
+}
+
+.bl-location-card h3 {
+    margin: 9px 0 10px;
+    color: var(--bl-blue-deep);
+    font-size: 22px;
+    line-height: 1.35;
+}
+
+.bl-location-description {
+    margin: 0 0 24px;
+    color: var(--bl-muted);
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.bl-location-detail {
+    display: flex;
+    gap: 12px;
+    padding: 15px 0;
+    border-top: 1px solid var(--bl-border);
+}
+
+.bl-location-detail-icon {
+    flex: 0 0 35px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--bl-orange-soft);
+    color: var(--bl-orange);
+    font-weight: 700;
+}
+
+.bl-location-detail strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--bl-blue-deep);
+    font-size: 12px;
+}
+
+.bl-location-detail p {
+    margin: 0;
+    color: var(--bl-muted);
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+.bl-location-direction-btn {
+    width: 100%;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding: 0 16px;
+    border-radius: 7px;
+    background: var(--bl-blue);
+    color: #fff;
+    font-size: 11.5px;
+    font-weight: 700;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.bl-location-direction-btn:hover {
+    color: #fff;
+    background: var(--bl-blue-dark);
+    transform: translateY(-2px);
+}
+
+.bl-location-direction-btn span {
+    font-size: 18px;
+}
+
+/* ========================================================================== 
+   FINAL CTA
+   ========================================================================== */
+
+.bl-contact-final-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 62px 0;
+    background: linear-gradient(135deg, var(--bl-blue) 0%, #263fa8 100%);
+}
+
+.bl-contact-final-cta::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -210px;
+    top: -250px;
+    border-radius: 50%;
+    background: rgba(247,82,28,.14);
+}
+
+.bl-final-cta-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.bl-final-cta-label {
+    color: #ffd5c7;
+}
+
+.bl-final-cta-inner h2 {
+    margin: 8px 0 8px;
+    color: #fff;
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.bl-final-cta-inner p {
+    max-width: 650px;
+    margin: 0;
+    color: #e2e8ff;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.bl-final-cta-actions {
+    flex: 0 0 auto;
+    margin-top: 0;
+}
+
+/* ========================================================================== 
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .bl-contact-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bl-contact-info-panel {
+        padding: 30px;
+    }
+
+    .bl-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bl-location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bl-map-card,
+    .bl-map-card iframe {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 700px) {
+    .bl-contact-container {
+        width: min(100% - 28px, 1180px);
+    }
+
+    .bl-contact-hero {
+        padding: 55px 0 60px;
+    }
+
+    .bl-contact-hero h1 {
+        font-size: 29px;
+        letter-spacing: -.5px;
+    }
+
+    .bl-contact-hero p {
+        font-size: 14px;
+    }
+
+    .bl-contact-section {
+        padding: 52px 0;
+    }
+
+    .bl-contact-form-card,
+    .bl-contact-info-panel,
+    .bl-location-card {
+        padding: 24px 20px;
+    }
+
+    .bl-form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .bl-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bl-final-cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bl-final-cta-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .bl-contact-hero-actions,
+    .bl-final-cta-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .bl-contact-hero-actions .bl-btn,
+    .bl-final-cta-actions .bl-btn {
+        width: 100%;
+    }
+
+    .bl-contact-info-card {
+        align-items: flex-start;
+    }
+
+    .bl-contact-section-heading h2,
+    .bl-form-heading h2,
+    .bl-contact-info-panel h2 {
+        font-size: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bl-contact-page *,
+    .bl-contact-page *::before,
+    .bl-contact-page *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}

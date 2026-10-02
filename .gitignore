@@ -1,0 +1,39 @@
+# Bỏ qua WordPress Core
+/wp-admin/
+/wp-includes/
+/xmlrpc.php
+/wp-*.php
+index.php
+license.txt
+readme.html
+
+# Bỏ qua File Cấu hình nhạy cảm
+wp-config.php
+
+# Bỏ qua Thư mục Uploads (Ảnh/File upload không đưa lên Git)
+/wp-content/uploads/
+/wp-content/blogs.dir/
+/wp-content/upgrade/
+/wp-content/backup-db/
+/wp-content/backups/
+
+# Bỏ qua các Plugin mặc định/không phải do mình viết
+/wp-content/plugins/*
+!/wp-content/plugins/bao-linh-core/
+
+# Bỏ qua các Theme không dùng đến
+/wp-content/themes/*
+!/wp-content/themes/bao-linh/
+!/wp-content/themes/twentytwentyfive/
+
+# Bỏ qua log & cache
+*.log
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,792 @@
+/* ==========================================================================
+   ABOUT PAGE STYLES - CHỐNG THẤM BẢO LINH
+   Primary Colors: Cam #f7521c | Xanh #3652cb
+   Path: wp-content/themes/bao-linh/assets/css/about.css
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. HERO BANNER BẢO LINH
+   ========================================================================== */
+
+.about-hero-section {
+    background: linear-gradient(135deg, #3652cb 0%, #1e3a8a 100%);
+    padding: 55px 0;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.hero-badge-tag {
+    display: inline-block;
+    background-color: #f7521c;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    font-size: 15px;
+    color: #e0e7ff;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   2. CÂU CHUYỆN BẢO LINH
+   ========================================================================== */
+
+.about-section {
+    padding: 50px 0;
+}
+
+.bg-light {
+    background-color: #f4f6fb;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.story-thumb-wrap {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(54, 82, 203, 0.12);
+    border: 1px solid #e2e8f0;
+}
+
+.story-thumb-wrap img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.story-experience-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(247, 82, 28, 0.95);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.exp-num {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.exp-text {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    max-width: 120px;
+}
+
+.section-badge-orange {
+    display: inline-block;
+    background-color: #fff3ed;
+    color: #f7521c;
+    border: 1px solid #ffdbc9;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.about-heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: #3652cb;
+    margin: 0 0 15px 0;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.story-desc {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.about-checklist-grid {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.about-checklist-grid li {
+    font-size: 13.5px;
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-check {
+    color: #f7521c;
+    font-weight: 800;
+}
+
+
+/* ==========================================================================
+   3. KHỐI CON SỐ KINH NGHIỆM
+   ========================================================================== */
+
+.about-stats-override {
+    margin-top: 10px;
+}
+
+.bl-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.stat-box {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 25px 18px 22px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.stat-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3652cb, #f7521c);
+}
+
+.stat-box:hover {
+    transform: translateY(-6px);
+    border-color: #3652cb;
+    box-shadow: 0 12px 28px rgba(54, 82, 203, 0.13);
+}
+
+.stat-number {
+    display: block;
+    color: #3652cb;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    min-height: 38px;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.stat-number.counter-done {
+    color: #f7521c;
+    transform: scale(1.04);
+}
+
+.stat-title {
+    display: block;
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 7px;
+}
+
+.stat-desc {
+    margin: 0;
+    color: #64748b;
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+.stat-box.stat-visible {
+    animation: statCardReveal 0.65s ease forwards;
+}
+
+@keyframes statCardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-box:nth-child(1).stat-visible { animation-delay: 0s; }
+.stat-box:nth-child(2).stat-visible { animation-delay: 0.12s; }
+.stat-box:nth-child(3).stat-visible { animation-delay: 0.24s; }
+.stat-box:nth-child(4).stat-visible { animation-delay: 0.36s; }
+
+
+/* ==========================================================================
+   4. TẦM NHÌN - SỨ MỆNH - GIÁ TRỊ CỐT LÕI
+   ========================================================================== */
+
+.section-title-center {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-heading-center {
+    font-size: 22px;
+    font-weight: 700;
+    color: #3652cb;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+}
+
+.values-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(54, 82, 203, 0.1);
+    border-color: #3652cb;
+}
+
+.value-card.active-border {
+    border-top: 4px solid #f7521c;
+}
+
+.card-icon-box {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: #eef2ff;
+    font-size: 22px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.card-icon-box.orange-bg {
+    background: #fff3ed;
+}
+
+.card-title-blue {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3652cb;
+    margin-bottom: 10px;
+}
+
+.card-title-orange {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f7521c;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   5. QUY TRÌNH 4 BƯỚC
+   ========================================================================== */
+
+.process-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px 15px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.process-step-card:hover {
+    border-color: #f7521c;
+    box-shadow: 0 4px 15px rgba(247, 82, 28, 0.12);
+}
+
+.step-badge {
+    display: inline-block;
+    background: #f7521c;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.step-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #3652cb;
+    margin: 0 0 8px 0;
+}
+
+.step-desc {
+    font-size: 12.5px;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   6. ĐỐI TÁC THƯƠNG HIỆU LỚN (ĐÃ TỐI ƯU CẤU TRÚC THEO YÊU CẦU)
+   ========================================================================== */
+
+.partners-section {
+    position: relative;
+    overflow: hidden;
+    padding: 55px 0;
+    background: #f4f6fb;
+}
+
+.partner-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.partner-section-title h2 {
+    margin: 0;
+    padding: 0;
+    color: #3652cb;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.3;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.title-line {
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #f7521c;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+/* --- DESKTOP LAYOUT (4 + 3) --- */
+.partner-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.partner-logos-grid .partner-card {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 22px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #dfe5ef;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hàng 1 (4 card): Mỗi card chiếm 3 cột */
+.partner-logos-grid .partner-card:nth-child(1),
+.partner-logos-grid .partner-card:nth-child(2),
+.partner-logos-grid .partner-card:nth-child(3),
+.partner-logos-grid .partner-card:nth-child(4) {
+    grid-column: span 3;
+}
+
+/* Hàng 2 (3 card căn giữa): Card thứ 5 bắt đầu ở cột 2, mỗi card 3 cột (2+3+3+3 = 11, chừa 1 cột bên phải) */
+.partner-logos-grid .partner-card:nth-child(5) {
+    grid-column: 2 / span 3;
+}
+.partner-logos-grid .partner-card:nth-child(6),
+.partner-logos-grid .partner-card:nth-child(7) {
+    grid-column: span 3;
+}
+
+.partner-logos-grid .partner-card img {
+    display: block;
+    width: auto;
+    max-width: 85%;
+    max-height: 65px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.partner-logos-grid .partner-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(54, 82, 203, 0.35);
+    box-shadow: 0 12px 25px rgba(54, 82, 203, 0.10);
+}
+
+.partner-logos-grid .partner-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ==========================================================================
+   7. CỬA HÀNG & GOOGLE MAPS
+   ========================================================================== */
+
+.location-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.location-info-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.company-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #3652cb;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+    line-height: 1.4;
+}
+
+.info-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.info-icon {
+    font-size: 18px;
+}
+
+.info-row strong {
+    font-size: 13px;
+    color: #1e293b;
+    display: block;
+}
+
+.info-row p {
+    font-size: 13px;
+    color: #475569;
+    margin: 2px 0 0 0;
+}
+
+.hotline-link {
+    color: #f7521c;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.map-embed-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+    height: 100%;
+    min-height: 320px;
+}
+
+.map-embed-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* ==========================================================================
+   8. STORY IMAGE SLIDESHOW
+   ========================================================================== */
+
+.story-thumb-wrap.story-slideshow {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(54, 82, 203, 0.12);
+    border: 1px solid #e2e8f0;
+    background: #eef2f7;
+}
+
+.story-slideshow-image {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.8s ease, transform 1.2s ease;
+    transform: scale(1);
+}
+
+.story-slideshow-image.is-changing {
+    opacity: 0;
+    transform: scale(1.025);
+}
+
+.story-image-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.03) 35%, rgba(0, 0, 0, 0) 65%);
+}
+
+.story-slide-dots {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 5;
+}
+
+.story-dot {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    transition: width 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.story-dot.active {
+    width: 22px;
+    border-radius: 10px;
+    background: #f7521c;
+    transform: scale(1.04);
+}
+
+
+/* ==========================================================================
+   9. RESPONSIVE - TABLET (991px trở xuống)
+   ========================================================================== */
+
+@media (max-width: 991px) {
+
+    .story-grid,
+    .location-grid-2,
+    .values-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid-4,
+    .bl-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* --- TABLET LAYOUT PARTNERS (3 + 3 + 1) --- */
+    .partner-logos-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 16px;
+    }
+
+    /* Hàng 1 (3 card): Mỗi card 2 cột */
+    .partner-logos-grid .partner-card:nth-child(1),
+    .partner-logos-grid .partner-card:nth-child(2),
+    .partner-logos-grid .partner-card:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    /* Hàng 2 (3 card): Mỗi card 2 cột */
+    .partner-logos-grid .partner-card:nth-child(4),
+    .partner-logos-grid .partner-card:nth-child(5),
+    .partner-logos-grid .partner-card:nth-child(6) {
+        grid-column: span 2;
+    }
+
+    /* Hàng 3 (1 card căn giữa): Card 7 bắt đầu từ cột 3, chiếm 2 cột */
+    .partner-logos-grid .partner-card:nth-child(7) {
+        grid-column: 3 / span 2;
+    }
+}
+
+
+/* ==========================================================================
+   10. RESPONSIVE - MOBILE (576px trở xuống)
+   ========================================================================== */
+
+@media (max-width: 576px) {
+
+    .about-hero-section {
+        padding: 35px 0;
+    }
+
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .about-section {
+        padding: 30px 0;
+    }
+
+    .story-thumb-wrap img,
+    .story-slideshow-image {
+        height: 250px;
+    }
+
+    .process-grid-4,
+    .bl-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .stat-box {
+        padding: 22px 15px;
+    }
+
+    .stat-number {
+        font-size: 30px;
+    }
+
+    /* --- MOBILE LAYOUT PARTNERS (2 + 2 + 2 + 1) --- */
+    .partners-section {
+        padding: 40px 0;
+    }
+
+    .partner-section-title {
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .partner-section-title h2 {
+        font-size: 17px;
+        white-space: normal;
+    }
+
+    .title-line {
+        width: 35px;
+        height: 2px;
+    }
+
+    .partner-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* Reset các vị trí cột cũ của Desktop/Tablet */
+    .partner-logos-grid .partner-card:nth-child(1),
+    .partner-logos-grid .partner-card:nth-child(2),
+    .partner-logos-grid .partner-card:nth-child(3),
+    .partner-logos-grid .partner-card:nth-child(4),
+    .partner-logos-grid .partner-card:nth-child(5),
+    .partner-logos-grid .partner-card:nth-child(6) {
+        grid-column: span 1;
+    }
+
+    /* Hàng 4 (1 card căn giữa): Card 7 chiếm cả 2 cột và căn giữa logo */
+    .partner-logos-grid .partner-card:nth-child(7) {
+        grid-column: span 2;
+        justify-self: center;
+        width: 100%;
+    }
+
+    .partner-logos-grid .partner-card {
+        min-height: 95px;
+        padding: 12px;
+    }
+
+    .partner-logos-grid .partner-card img {
+        max-width: 85%;
+        max-height: 50px;
+    }
+}
+
+
+/* ==========================================================================
+   11. ACCESSIBILITY / REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .stat-box,
+    .partner-card,
+    .value-card,
+    .process-step-card,
+    .story-slideshow-image,
+    .story-dot {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .partner-card:hover,
+    .stat-box:hover,
+    .value-card:hover {
+        transform: none !important;
+    }
+}

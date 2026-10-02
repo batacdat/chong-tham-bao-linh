@@ -1,0 +1,906 @@
+/* ==========================================================================
+   FRONT-PAGE SPECIFIC STYLES - CHỐNG THẤM BẢO LINH
+   Path: wp-content/themes/bao-linh/assets/css/front-page.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION GRID (SLIDER & SIDEBAR BANNERS)
+   -------------------------------------------------------------------------- */
+.bl-hero-section {
+    padding: 20px 0 30px;
+    background-color: #f8f9fa;
+}
+
+.bl-hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.bl-hero-slider-wrap {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.bl-hero-swiper {
+    width: 100%;
+    height: 380px;
+}
+
+.bl-hero-swiper .swiper-slide {
+    position: relative;
+}
+
+.bl-hero-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Hero Sidebar Banners */
+.bl-hero-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bl-banner-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.bl-card-intro {
+    border-left: 4px solid #003366; /* Màu xanh Navy Bảo Linh */
+}
+
+.bl-badge {
+    display: inline-block;
+    background: #eef2ff;
+    color: #003366;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.card-title {
+    font-size: 16px;
+    color: #003366;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+.card-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #333333;
+}
+
+.card-check-list li {
+    margin-bottom: 4px;
+}
+
+.bl-card-promo {
+    background: #fff5f5;
+    border: 1px dashed #e53e3e;
+}
+
+.promo-tag {
+    color: #e53e3e;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.bl-card-promo h4 {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #2d3748;
+}
+
+.bl-card-promo p {
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.btn-promo-call {
+    display: block;
+    text-align: center;
+    background: #e53e3e;
+    color: #ffffff !important;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. SECTION THƯƠNG HIỆU ĐỐI TÁC & CON SỐ NĂNG LỰC (BỐ CỤC ĐÃ TỐI ƯU THEO HÌNH 1)
+   -------------------------------------------------------------------------- */
+.bl-brands-experience-section {
+    padding: 40px 0 35px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #edf2f7;
+}
+
+/* Tiêu đề căn giữa có 2 vạch trang trí hai bên */
+.partner-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.partner-section-title h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a202c;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.partner-section-title .title-line {
+    height: 1px;
+    width: 70px;
+    background-color: #cbd5e1;
+}
+
+/* --- LƯỚI GRID ĐỐI TÁC THƯƠNG HIỆU --- */
+.partner-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partner-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 15px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Desktop: Hàng 1 có 4 card (Mỗi card 3/12 cột) */
+.partner-logos-grid .partner-card:nth-child(1),
+.partner-logos-grid .partner-card:nth-child(2),
+.partner-logos-grid .partner-card:nth-child(3),
+.partner-logos-grid .partner-card:nth-child(4) {
+    grid-column: span 3;
+}
+
+/* Desktop: Hàng 2 có 3 card căn giữa (Card 5 bắt đầu ở cột 2, mỗi card 3/12 cột) */
+.partner-logos-grid .partner-card:nth-child(5) {
+    grid-column: 2 / span 3;
+}
+.partner-logos-grid .partner-card:nth-child(6),
+.partner-logos-grid .partner-card:nth-child(7) {
+    grid-column: span 3;
+}
+
+.partner-card:hover {
+    border-color: #003366; /* Màu xanh thương hiệu Bảo Linh */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.partner-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.partner-card img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+/* Khối Thống Kê Con Số Năng Lực */
+.bl-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.stat-box {
+    padding: 20px 15px;
+    background: #ffffff;
+    border: 1px solid #edf2f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.stat-number {
+    display: block;
+    font-size: 32px;
+    font-weight: 800;
+    color: #d97706;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: #003366;
+    display: block;
+}
+
+.stat-desc {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. SECTION DANH MỤC SẢN PHẨM (TÔNG CAM #f7521c & XANH #3652cb)
+   -------------------------------------------------------------------------- */
+.home-section {
+    padding: 45px 0;
+}
+
+.bg-light {
+    background-color: #f4f6fb;
+}
+
+.bl-product-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-left: 5px solid #f7521c;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.product-header-badge-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.badge-tag {
+    display: inline-block;
+    background-color: #f7521c;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bl-product-section-header .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #3652cb;
+    margin: 0;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.btn-see-all-products {
+    display: inline-block;
+    align-items: center;
+    color: #3652cb;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+     padding: 9px 18px;
+    border-radius: 6px;
+     white-space: nowrap;
+    box-shadow: 0 3px 8px rgba(54, 82, 203, 0.2);
+}
+
+.btn-see-all-products:hover {
+    color: #f7521c;
+     box-shadow: 0 4px 12px rgba(247, 82, 28, 0.3);
+    transform: translateY(-2px);
+
+}
+
+.btn-see-all-products .arrow {
+    font-size: 15px;
+    margin-left: 3px;
+    transition: transform 0.2s ease;
+
+}
+.btn-see-all-products:hover .arrow {
+ transform: translateX(4px);
+
+}
+
+.products-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    border-color: #3652cb;
+    box-shadow: 0 8px 20px rgba(54, 82, 203, 0.12);
+}
+
+.product-thumb {
+    height: 200px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-thumb a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.product-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.product-card:hover .product-thumb img {
+    transform: scale(1.1);
+}
+
+.product-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #94a3b8;
+    font-weight: 700;
+    font-size: 13px;
+    background: #e2e8f0;
+}
+
+.product-sku-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(15, 23, 42, 0.75);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    backdrop-filter: blur(2px);
+}
+
+.product-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+    height: 40px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.product-title a {
+    color: #1e293b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.product-title a:hover {
+    color: #f7521c;
+}
+
+.product-action {
+    margin-top: auto;
+}
+
+.btn-product-detail {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 9px 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #3652cb;
+    background-color: #ffffff;
+    border: 1.5px solid #3652cb;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-product-detail:hover {
+    background-color: #f7521c;
+    border-color: #f7521c;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(247, 82, 28, 0.25);
+}
+
+
+/* ==========================================================================
+   4. SECTION HƯỚNG DẪN KỸ THUẬT / QUY TRÌNH THI CÔNG
+   ========================================================================== */
+.section-knowledge-standard {
+    padding: 45px 0;
+    background-color: #f8fafc;
+}
+
+.knowledge-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+    gap: 15px;
+}
+
+.knowledge-badge {
+    display: inline-block;
+    background-color: #fff3ed;
+    color: #f7521c;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+    border: 1px solid #ffdbc9;
+}
+
+.knowledge-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #3652cb;
+    margin: 0;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.btn-see-all-knowledge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #3652cb;
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    box-shadow: 0 3px 8px rgba(54, 82, 203, 0.2);
+}
+
+.btn-see-all-knowledge:hover {
+    background-color: #f7521c;
+    box-shadow: 0 4px 12px rgba(247, 82, 28, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-see-all-knowledge .arrow {
+    margin-left: 6px;
+    transition: transform 0.2s ease;
+}
+
+.btn-see-all-knowledge:hover .arrow {
+    transform: translateX(4px);
+}
+
+.knowledge-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.knowledge-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.knowledge-card:hover {
+    transform: translateY(-4px);
+    border-color: #3652cb;
+    box-shadow: 0 8px 20px rgba(54, 82, 203, 0.12);
+}
+
+.knowledge-thumb {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    background-color: #f1f5f9;
+    overflow: hidden;
+}
+
+.knowledge-thumb a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.knowledge-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.knowledge-card:hover .knowledge-thumb img {
+    transform: scale(1.06);
+}
+
+.knowledge-tag-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(247, 82, 28, 0.9);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 7px;
+    border-radius: 4px;
+    backdrop-filter: blur(2px);
+    text-transform: uppercase;
+}
+
+.knowledge-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.knowledge-date {
+    font-size: 11px;
+    color: #64748b;
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 600;
+}
+
+.knowledge-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+    height: 42px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.knowledge-card-title a {
+    color: #1e293b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.knowledge-card-title a:hover {
+    color: #f7521c;
+}
+
+.knowledge-excerpt {
+    font-size: 12.5px;
+    color: #475569;
+    line-height: 1.45;
+    margin: 0 0 15px 0;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.knowledge-action {
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px dashed #e2e8f0;
+}
+
+.btn-read-more {
+    font-size: 12px;
+    font-weight: 700;
+    color: #3652cb;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+
+.btn-read-more:hover {
+    color: #f7521c;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. SECTION FORM LIÊN HỆ & BÁO GIÁ
+   -------------------------------------------------------------------------- */
+.cta-form-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.cta-info-text h2 {
+    font-size: 20px;
+    color: #003366;
+    margin: 5px 0 10px;
+}
+
+.cta-info-text p {
+    font-size: 14px;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+.cta-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    color: #2d3748;
+}
+
+.cta-check-list li {
+    margin-bottom: 8px;
+}
+
+.bl-consultation-form .form-group {
+    margin-bottom: 12px;
+}
+
+.bl-consultation-form input,
+.bl-consultation-form select,
+.bl-consultation-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+}
+
+.bl-consultation-form input:focus,
+.bl-consultation-form select:focus,
+.bl-consultation-form textarea:focus {
+    border-color: #003366;
+}
+
+.btn-block {
+    width: 100%;
+    background: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (TABLET & MOBILE BREAKPOINTS CHUẨN HÌNH 1)
+   ========================================================================== */
+
+/* --- TABLET (991px trở xuống) --- */
+@media (max-width: 991px) {
+    .bl-hero-grid,
+    .cta-form-box {
+        grid-template-columns: 1fr;
+    }
+    .bl-stats-grid,
+    .products-grid-4,
+    .knowledge-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* TABLET PARTNERS (3 + 3 + 1) */
+    .partner-logos-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+    }
+
+    /* Hàng 1 (3 card): Card 1,2,3 mỗi card chiếm 2 cột */
+    .partner-logos-grid .partner-card:nth-child(1),
+    .partner-logos-grid .partner-card:nth-child(2),
+    .partner-logos-grid .partner-card:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    /* Hàng 2 (3 card): Card 4,5,6 mỗi card chiếm 2 cột */
+    .partner-logos-grid .partner-card:nth-child(4),
+    .partner-logos-grid .partner-card:nth-child(5),
+    .partner-logos-grid .partner-card:nth-child(6) {
+        grid-column: span 2;
+    }
+
+    /* Hàng 3 (1 card căn giữa): Card 7 bắt đầu từ cột 3, chiếm 2 cột */
+    .partner-logos-grid .partner-card:nth-child(7) {
+        grid-column: 3 / span 2;
+    }
+}
+
+/* --- MOBILE (576px trở xuống) --- */
+@media (max-width: 576px) {
+
+    .bl-hero-swiper {
+        height: 250px;
+    }
+    
+    .section-knowledge-standard {
+        padding: 25px 0;
+    }
+    /* khối vật tư chống thấm */
+    .bl-product-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 18px;
+        padding-bottom: 10px;
+        .product-header-badge-title {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+    .section-title {
+        font-size: 15px;
+        line-height: 1.35;
+
+    }
+    .btn-see-all-products {
+        width: 100%;
+        justify-content: center;
+        padding: 8px 12px;
+        font-size: 12px;
+
+    }
+    /* khối bài viết */
+    .knowledge-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 18px;
+        padding-bottom: 10px;
+    }
+    .knowledge-title {
+        font-size: 16px;
+        line-height: 1.35;
+    }
+    .btn-see-all-knowledge {
+        width: 100%;
+        justify-content: center;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .bl-stats-grid,
+    .products-grid-4,
+    .knowledge-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* MOBILE PARTNERS (2 + 2 + 2 + 1) */
+    .partner-section-title .title-line {
+        width: 35px;
+    }
+
+    .partner-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* Hàng 1, 2, 3: Mỗi card chiếm 1/2 cột */
+    .partner-logos-grid .partner-card:nth-child(1),
+    .partner-logos-grid .partner-card:nth-child(2),
+    .partner-logos-grid .partner-card:nth-child(3),
+    .partner-logos-grid .partner-card:nth-child(4),
+    .partner-logos-grid .partner-card:nth-child(5),
+    .partner-logos-grid .partner-card:nth-child(6) {
+        grid-column: span 1;
+    }
+
+    /* Hàng 4 (1 card căn giữa): Card 7 chiếm cả 2 cột */
+    .partner-logos-grid .partner-card:nth-child(7) {
+        grid-column: span 2;
+        justify-self: center;
+        width: 100%;
+    }
+
+    .partner-card {
+        height: 65px;
+        padding: 8px;
+    }
+
+}

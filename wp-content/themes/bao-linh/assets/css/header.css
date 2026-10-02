@@ -1,0 +1,517 @@
+/* ==========================================================================
+   HEADER SPECIFIC STYLES - CHỐNG THẤM BẢO LINH
+   Path: wp-content/themes/bao-linh/assets/css/header.css
+   ========================================================================== */
+
+:root {
+  --bl-orange: #f7521c;
+  --bl-navy: #3652cb;
+  --bl-navy-dark: #2b42a2;
+  --bl-text-dark: #1e293b;
+  --bl-white: #ffffff;
+}
+
+.header-container-wide {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  background-color: var(--bl-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+}
+
+/* --------------------------------------------------------------------------
+   1. TOPBAR STYLES (MÀU CAM)
+   -------------------------------------------------------------------------- */
+.header-topbar {
+  background-color: var(--bl-orange);
+  color: #ffffff;
+  padding: 8px 0;
+}
+
+.header-topbar .header-container-wide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-brand-title {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.topbar-item {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   2. MIDDLE HEADER (DESKTOP)
+   -------------------------------------------------------------------------- */
+.header-middle {
+  padding: 18px 0;
+  background-color: #ffffff;
+}
+
+.header-middle .header-container-wide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.site-logo img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+
+.header-search-wrapper {
+  flex: 1;
+  max-width: 580px;
+}
+
+.header-search-form {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.header-search-form:focus-within {
+  border-color: var(--bl-orange);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(247, 82, 28, 0.15);
+}
+
+.search-input-field {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 10px 16px;
+  outline: none;
+  font-size: 15px;
+  color: #1a202c;
+}
+
+.search-submit-btn {
+  background-color: var(--bl-orange);
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.search-submit-btn:hover {
+  background-color: #d94814;
+}
+
+.header-contacts-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.zalo-icon-bg {
+  background-color: #0068ff;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 11px;
+}
+
+.hotline-icon-bg {
+  background-color: #e53e3e;
+  color: #ffffff;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #718096;
+}
+
+.contact-number {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1a202c;
+}
+
+/* --------------------------------------------------------------------------
+   3. BOTTOM HEADER & NAVBAR (DESKTOP)
+   -------------------------------------------------------------------------- */
+.header-bottom {
+  background-color: var(--bl-navy);
+}
+
+.nav-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.product-category-dropdown {
+  position: relative;
+}
+
+.cat-dropdown-btn {
+  background-color: var(--bl-navy);
+  color: #ffffff;
+  border: none;
+  padding: 13px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.cat-dropdown-btn:hover {
+  background-color: var(--bl-navy-dark);
+}
+
+.cat-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 280px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 8px 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 200;
+  border: 1px solid #e2e8f0;
+}
+
+.product-category-dropdown:hover .cat-dropdown-content,
+.product-category-dropdown.active .cat-dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.cat-menu-list {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.cat-menu-list li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+}
+
+.cat-menu-list li a:hover {
+  background-color: #fff5f2;
+  color: var(--bl-orange);
+}
+
+.primary-menu-desktop ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-menu-desktop a {
+  display: block;
+  padding: 13px 18px;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.primary-menu-desktop a:hover,
+.primary-menu-desktop .current-menu-item a {
+  color: #f2994a;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Utility Visibility Classes */
+.mobile-only {
+  display: none !important;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+/* --------------------------------------------------------------------------
+   4. RESPONSIVE MOBILE & TABLET HEADER (< 991px) — CHUẨN HÌNH SỐ 2
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+
+  /* 4.1 Topbar Mobile: Ẩn địa chỉ, Căn giữa chữ & Tỷ lệ Font vừa vặn */
+  .header-topbar {
+    padding: 10px 12px;
+    background-color: var(--bl-orange);
+  }
+
+  .header-topbar .header-container-wide {
+    display: block;
+    text-align: center;
+  }
+
+  .topbar-brand-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 13.5px !important; /* Chuẩn tỷ lệ khung hình di động */
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    margin: 0 auto;
+  }
+
+  /* 4.2 Middle Header Mobile: Icon Bar bên trái, Logo Căn Giữa */
+  .header-mobile-main {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  /* Nút Toggle Menu Icon Bar */
+  .mobile-nav-toggle {
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transition: background 0.2s ease;
+  }
+
+  .mobile-nav-toggle:active {
+    background: #f1f5f9;
+  }
+
+  .bar-icon-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 20px;
+  }
+
+  .icon-line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #000000;
+    /* border-radius: 2px; */
+  }
+
+  /* Logo Bảo Linh Căn Giữa Cân Bằng */
+  .site-logo-mobile {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .site-logo-mobile img {
+    height: 52px;
+    width: auto;
+    display: block;
+  }
+
+  .mobile-header-placeholder {
+    width: 38px; /* Giúp logo được giữ đúng tâm giữa */
+  }
+
+  /* 4.3 Mobile Search Bar Phía Dưới */
+  .mobile-search-bar {
+    padding: 10px 15px 12px;
+    background: #ffffff;
+  }
+
+  .mobile-search-form {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--bl-orange);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .mobile-search-form input {
+    border: none;
+    padding: 9px 12px;
+    width: 100%;
+    outline: none;
+    font-size: 13.5px;
+  }
+
+  .mobile-search-form button {
+    background: var(--bl-orange);
+    color: #ffffff;
+    border: none;
+    padding: 9px 16px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  /* 4.4 Drawer Menu Popup & Overlay */
+  .mobile-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(2px);
+    z-index: 99998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-nav-drawer {
+    position: fixed;
+    top: 0;
+    left: -290px;
+    width: 290px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.25);
+    z-index: 99999;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 20px 16px;
+    overflow-y: auto;
+  }
+
+  .mobile-nav-drawer.active {
+    left: 0;
+  }
+
+  .mobile-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--bl-orange);
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+    color: var(--bl-navy);
+    font-size: 15px;
+  }
+
+  .mobile-drawer-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--bl-navy);
+    padding: 0 6px;
+  }
+
+  .mobile-drawer-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-drawer-menu li {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .mobile-drawer-menu a {
+    display: block;
+    padding: 12px 0;
+    font-weight: 700;
+    color: var(--bl-navy);
+    text-decoration: none;
+    font-size: 14.5px;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-drawer-menu a:hover {
+    color: var(--bl-orange);
+  }
+}
+
+/* Mobile Nhỏ (< 400px) */
+@media (max-width: 400px) {
+  .topbar-brand-title {
+    font-size: 12px !important;
+  }
+}

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   BAO LINH THEME - SYSTEM CSS VARIABLES & RESET
+   ========================================================================== */
+:root {
+  --bl-navy: #3652cb;
+  --bl-navy-dark: #2b42a2;
+  --bl-orange: #f7521c;
+  --bl-orange-hover: #ed4107;
+  --bl-bg-gray: #F4F6F8;
+  --bl-text-dark: #2D3748;
+  --bl-text-muted: #718096;
+  --bl-white: #FFFFFF;
+  --bl-border: #E2E8F0;
+  
+  --bl-font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --bl-container-max: 1200px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--bl-font-main);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--bl-text-dark);
+  background-color: var(--bl-white);
+}
+
+a {
+  color: var(--bl-navy);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--bl-orange);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--bl-container-max);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Helper Classes cho Desktop */
+.mobile-only {
+  display: none !important;
+}
+.desktop-only {
+  display: block !important;
+}
+

@@ -1,0 +1,169 @@
+/* ==========================================================================
+   FOOTER SPECIFIC STYLES - CHỐNG THẤM BẢO LINH
+   Path: wp-content/themes/bao-linh/assets/css/footer.css
+   ========================================================================== */
+
+:root {
+  --bl-orange: #f7521c;
+  --bl-navy-dark: #1a2536;
+  --bl-navy-deeper: #111827;
+  --bl-text-light: #94a3b8;
+  --bl-text-white: #ffffff;
+}
+
+.site-footer {
+  background-color: var(--bl-navy-dark);
+  color: var(--bl-text-light);
+  padding-top: 50px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  border-top: 4px solid var(--bl-orange);
+}
+
+.site-footer .container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 1. LAYOUT GRID FOOTER */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1.6fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-col h4 {
+  color: var(--bl-text-white);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--bl-orange);
+}
+
+.footer-col p {
+  margin: 0 0 10px 0;
+  color: #cbd5e1;
+}
+
+.footer-col strong {
+  color: var(--bl-text-white);
+}
+
+/* 2. MENU LIST FOOTER */
+.footer-col ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer-col ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  color: var(--bl-orange);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-col ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--bl-orange);
+  padding-left: 4px;
+}
+
+/* 3. CTA BUTTON & CONTACT KHỐI 4 */
+.footer-cta-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 12px;
+}
+
+.footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--bl-orange);
+  color: #ffffff !important;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease;
+}
+
+.footer-cta-btn:hover {
+  background-color: #d94814;
+}
+
+/* 4. FOOTER BOTTOM COPYRIGHT */
+.footer-bottom {
+  background-color: var(--bl-navy-deeper);
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* 5. RESPONSIVE MOBILE & TABLET */
+@media (max-width: 991px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .site-footer {
+    padding-top: 35px;
+  }
+
+  .footer-col h4 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+}
