@@ -256,7 +256,7 @@ get_header();
                         <span class="info-icon">📞</span>
                         <div>
                             <strong>Hotline tư vấn kỹ thuật 24/7:</strong>
-                            <p><a href="tel:0903232492" class="hotline-link">0903.232.492</a> - <a href="tel:0985594631" class="hotline-link">0985.594.631</a></p>
+                            <p><a href="tel:0903232492" class="hotline-link">0903.232.492</a> - <a href="tel:0369274410" class="hotline-link">0369.274.410</a></p>
                         </div>
                     </div>
 

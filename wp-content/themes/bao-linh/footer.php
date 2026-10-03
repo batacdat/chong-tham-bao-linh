@@ -12,7 +12,7 @@
                 <h4>CÔNG TY TNHH TM VÀ PT XÂY DỰNG BẢO LINH</h4>
                 <p>Chuyên cung cấp vật liệu chống thấm cao cấp, tư vấn và thi công các giải pháp chống thấm triệt để cho mọi công trình dân dụng & công nghiệp.</p>
                 <p style="margin-top: 12px;"><strong>Địa chỉ:</strong> Cụm công nghiệp Bích Hòa, Thanh Oai, Hà Nội</p>
-                <p><strong>Hotline:</strong> <a href="tel:0987654321" style="color: var(--bl-orange); text-decoration: none; font-weight:700;">0987.654.321</a></p>
+                <p><strong>Hotline:</strong> <a href="tel:0903232492" style="color: var(--bl-orange); text-decoration: none; font-weight:700;">0903.232.492</a></p>
             </div>
 
             <!-- Cột 2: Sản phẩm -->
@@ -50,12 +50,12 @@
         </div>
     </div>
 
-    <!-- Thanh Bản quyền phía dưới -->
+    <!-- Thanh Bản quyền phía dưới
     <div class="footer-bottom">
         <div class="container">
             <p>&copy; <?php echo date('Y'); ?> BẢO LINH WATERPROOF. All Rights Reserved. Thiết kế tối ưu SEO & Hiệu năng.</p>
         </div>
-    </div>
+    </div> -->
 </footer>
 
 <?php wp_footer(); ?>
